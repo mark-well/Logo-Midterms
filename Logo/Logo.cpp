@@ -30,7 +30,7 @@ void DrawCircle(float cx, float cy, float r, int num_segments)
         float theta = 2.0f * 3.1415926f * float(ii) / float(num_segments);//get the current angle
 
         float x = r * cosf(theta);//calculate the x component
-        float y = r * sinf(theta);//calculate the y 
+        float y = r * sinf(theta);//calculate the y component
 
         glVertex2f(x + cx, y + cy);//output vertex
 
@@ -405,10 +405,12 @@ void logoText()
     glEnd();
 }
 
+
+// Draw the shadow of the logo text
 void logoTextShadow()
 {
-    float xOffset = -0.3;
-    float yOffset = -0.3;
+    float xOffset = -0.2;
+    float yOffset = -0.2;
 
     // G
     glColor3f(darkGreenR, darkGreenG, darkGreenB);
