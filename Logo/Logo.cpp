@@ -21,6 +21,7 @@ float orangeB = 81 / colorBase;
 void display();
 void reshape(int, int);
 
+// Draw a circle
 void DrawCircle(float cx, float cy, float r, int num_segments)
 {
     glBegin(GL_POLYGON);
@@ -37,7 +38,7 @@ void DrawCircle(float cx, float cy, float r, int num_segments)
     glEnd();
 }
 
-// Logo graphic
+// Draw the logo graphic
 void logo()
 {
     // Mid Rect
@@ -133,7 +134,7 @@ void logo()
     glEnd();
 }
 
-// Shadow of the logo
+// Draw the shadow of the logo
 void shadow()
 {
 	float xOffset = -0.3;
