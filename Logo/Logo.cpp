@@ -233,6 +233,350 @@ void shadow()
     glEnd();
 }
 
+void logoText()
+{
+    float xOffset = 0;
+    float yOffset = 0;
+
+    // G
+	glColor3f(whiteR, whiteG, whiteB);
+	glBegin(GL_POLYGON);
+    glVertex2f(-3.5 + xOffset, 8 + yOffset); //S1
+    glVertex2f(-4.5 + xOffset, 8 + yOffset); //T1
+    glVertex2f(-4.3 + xOffset, 7.8 + yOffset); //U1
+    glVertex2f(-3.5 + xOffset, 7.8 + yOffset); //V1
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-4.5 + xOffset, 8 + yOffset); //T1
+    glVertex2f(-4.5 + xOffset, 7 + yOffset); //W1
+    glVertex2f(-4.3 + xOffset, 7.2 + yOffset); //Z1
+    glVertex2f(-4.3 + xOffset, 7.8 + yOffset); //U1
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-4.5 + xOffset, 7 + yOffset); //W1
+    glVertex2f(-3.5 + xOffset, 7 + yOffset); //A2
+    glVertex2f(-3.7 + xOffset, 7.2 + yOffset); //B2
+    glVertex2f(-4.3 + xOffset, 7.2 + yOffset); //Z1
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-3.5 + xOffset, 7 + yOffset); //A2
+    glVertex2f(-3.5 + xOffset, 7.6 + yOffset); //C2
+    glVertex2f(-3.7 + xOffset, 7.4 + yOffset); //D2
+    glVertex2f(-3.7 + xOffset, 7.2 + yOffset); //B2
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-3.5 + xOffset, 7.6 + yOffset); //C2
+    glVertex2f(-3.9 + xOffset, 7.6 + yOffset); //E2
+    glVertex2f(-3.9 + xOffset, 7.4 + yOffset); //E2
+    glVertex2f(-3.7 + xOffset, 7.4 + yOffset); //D2
+    glEnd();
+
+    // O
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+	glVertex2f(-2 + xOffset, 8 + yOffset); //N1
+	glVertex2f(-3 + xOffset, 8 + yOffset); //K1
+	glVertex2f(-3 + xOffset, 7 + yOffset); //L1
+	glVertex2f(-2 + xOffset, 7 + yOffset); //M1
+    glEnd();
+
+    glColor3f(greenR, greenG, greenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-2.2 + xOffset, 7.8 + yOffset); //R1
+    glVertex2f(-2.8 + xOffset, 7.8 + yOffset); //O1
+    glVertex2f(-2.8 + xOffset, 7.2 + yOffset); //P1
+    glVertex2f(-2.2 + xOffset, 7.2 + yOffset); //Q1
+    glEnd();
+
+    // S
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(1 + xOffset, 8 + yOffset); //G2
+    glVertex2f(0 + xOffset, 8 + yOffset); //H2
+    glVertex2f(0 + xOffset, 7.8 + yOffset); //M2
+    glVertex2f(1 + xOffset, 7.8 + yOffset); //N2
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(0 + xOffset, 7.8 + yOffset); //M2
+    glVertex2f(0 + xOffset, 7.6 + yOffset); //J2
+    glVertex2f(0.2 + xOffset, 7.6 + yOffset); //T2
+    glVertex2f(0.2 + xOffset, 7.8 + yOffset); //S2
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(0 + xOffset, 7.6 + yOffset); //J2
+    glVertex2f(0 + xOffset, 7.4 + yOffset); //K2
+    glVertex2f(1 + xOffset, 7.4 + yOffset); //L2
+    glVertex2f(1 + xOffset, 7.6 + yOffset); //I2
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(0.8 + xOffset, 7.4 + yOffset); //U2
+    glVertex2f(1 + xOffset, 7.4 + yOffset); //L2
+    glVertex2f(1 + xOffset, 7.2 + yOffset); //R2
+    glVertex2f(0.8 + xOffset, 7.2 + yOffset); //V2
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(0 + xOffset, 7.2 + yOffset); //Q2
+    glVertex2f(1 + xOffset, 7.2 + yOffset); //R2
+    glVertex2f(1 + xOffset, 7 + yOffset); //O2
+    glVertex2f(0 + xOffset, 7 + yOffset); //P2
+    glEnd();
+
+    // H
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(1.7 + xOffset, 8 + yOffset); //B3
+    glVertex2f(1.5 + xOffset, 8 + yOffset); //W2
+    glVertex2f(1.5 + xOffset, 7 + yOffset); //Z2
+    glVertex2f(1.7 + xOffset, 7 + yOffset); //A3
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(1.7 + xOffset, 7.6 + yOffset); //H3
+    glVertex2f(1.7 + xOffset, 7.4 + yOffset); //J3
+    glVertex2f(2.3 + xOffset, 7.4 + yOffset); //I3
+    glVertex2f(2.3 + xOffset, 7.6 + yOffset); //G3
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(2.3 + xOffset, 8 + yOffset); //F3
+    glVertex2f(2.5 + xOffset, 8 + yOffset); //C3
+    glVertex2f(2.5 + xOffset, 7 + yOffset); //D3
+    glVertex2f(2.3 + xOffset, 7 + yOffset); //E3
+    glEnd();
+
+    // O
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(4 + xOffset, 8 + yOffset); //P3
+    glVertex2f(3 + xOffset, 8 + yOffset); //M3
+    glVertex2f(3 + xOffset, 7 + yOffset); //N3
+    glVertex2f(4 + xOffset, 7 + yOffset); //O3
+    glEnd();
+
+    glColor3f(greenR, greenG, greenB);
+    glBegin(GL_POLYGON);
+	glVertex2f(3.8 + xOffset, 7.8 + yOffset); //T3
+	glVertex2f(3.2 + xOffset, 7.8 + yOffset); //Q3
+	glVertex2f(3.2 + xOffset, 7.2 + yOffset); //R3
+	glVertex2f(3.8 + xOffset, 7.2 + yOffset); //S3
+    glEnd();
+
+    // P
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(4.5 + xOffset, 8 + yOffset); //U3
+    glVertex2f(5.5 + xOffset, 8 + yOffset); //A4
+    glVertex2f(5.5 + xOffset, 7.4 + yOffset); //F4
+    glVertex2f(4.5 + xOffset, 7.4 + yOffset); //G4
+    glEnd();
+
+    glColor3f(greenR, greenG, greenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(4.7 + xOffset, 7.8 + yOffset); //W3
+    glVertex2f(5.3 + xOffset, 7.8 + yOffset); //B4
+    glVertex2f(5.3 + xOffset, 7.6 + yOffset); //C4
+    glVertex2f(4.7 + xOffset, 7.6 + yOffset); //H4
+    glEnd();
+
+    glColor3f(whiteR, whiteG, whiteB);
+    glBegin(GL_POLYGON);
+    glVertex2f(4.5 + xOffset, 7.4 + yOffset); //G4
+    glVertex2f(4.7 + xOffset, 7.4 + yOffset); //E4
+    glVertex2f(4.7 + xOffset, 7 + yOffset); //Z3
+    glVertex2f(4.5 + xOffset, 7 + yOffset); //V3
+    glEnd();
+}
+
+void logoTextShadow()
+{
+    float xOffset = -0.3;
+    float yOffset = -0.3;
+
+    // G
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-3.5 + xOffset, 8 + yOffset); //S1
+    glVertex2f(-4.5 + xOffset, 8 + yOffset); //T1
+    glVertex2f(-4.3 + xOffset, 7.8 + yOffset); //U1
+    glVertex2f(-3.5 + xOffset, 7.8 + yOffset); //V1
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-4.5 + xOffset, 8 + yOffset); //T1
+    glVertex2f(-4.5 + xOffset, 7 + yOffset); //W1
+    glVertex2f(-4.3 + xOffset, 7.2 + yOffset); //Z1
+    glVertex2f(-4.3 + xOffset, 7.8 + yOffset); //U1
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-4.5 + xOffset, 7 + yOffset); //W1
+    glVertex2f(-3.5 + xOffset, 7 + yOffset); //A2
+    glVertex2f(-3.7 + xOffset, 7.2 + yOffset); //B2
+    glVertex2f(-4.3 + xOffset, 7.2 + yOffset); //Z1
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-3.5 + xOffset, 7 + yOffset); //A2
+    glVertex2f(-3.5 + xOffset, 7.6 + yOffset); //C2
+    glVertex2f(-3.7 + xOffset, 7.4 + yOffset); //D2
+    glVertex2f(-3.7 + xOffset, 7.2 + yOffset); //B2
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-3.5 + xOffset, 7.6 + yOffset); //C2
+    glVertex2f(-3.9 + xOffset, 7.6 + yOffset); //E2
+    glVertex2f(-3.9 + xOffset, 7.4 + yOffset); //E2
+    glVertex2f(-3.7 + xOffset, 7.4 + yOffset); //D2
+    glEnd();
+
+    // O
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-2 + xOffset, 8 + yOffset); //N1
+    glVertex2f(-3 + xOffset, 8 + yOffset); //K1
+    glVertex2f(-3 + xOffset, 7 + yOffset); //L1
+    glVertex2f(-2 + xOffset, 7 + yOffset); //M1
+    glEnd();
+
+    glColor3f(greenR, greenG, greenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-2.2 + xOffset, 7.8 + yOffset); //R1
+    glVertex2f(-2.8 + xOffset, 7.8 + yOffset); //O1
+    glVertex2f(-2.8 + xOffset, 7.2 + yOffset); //P1
+    glVertex2f(-2.2 + xOffset, 7.2 + yOffset); //Q1
+    glEnd();
+
+    // S
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(1 + xOffset, 8 + yOffset); //G2
+    glVertex2f(0 + xOffset, 8 + yOffset); //H2
+    glVertex2f(0 + xOffset, 7.8 + yOffset); //M2
+    glVertex2f(1 + xOffset, 7.8 + yOffset); //N2
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(0 + xOffset, 7.8 + yOffset); //M2
+    glVertex2f(0 + xOffset, 7.6 + yOffset); //J2
+    glVertex2f(0.2 + xOffset, 7.6 + yOffset); //T2
+    glVertex2f(0.2 + xOffset, 7.8 + yOffset); //S2
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(0 + xOffset, 7.6 + yOffset); //J2
+    glVertex2f(0 + xOffset, 7.4 + yOffset); //K2
+    glVertex2f(1 + xOffset, 7.4 + yOffset); //L2
+    glVertex2f(1 + xOffset, 7.6 + yOffset); //I2
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(0.8 + xOffset, 7.4 + yOffset); //U2
+    glVertex2f(1 + xOffset, 7.4 + yOffset); //L2
+    glVertex2f(1 + xOffset, 7.2 + yOffset); //R2
+    glVertex2f(0.8 + xOffset, 7.2 + yOffset); //V2
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(0 + xOffset, 7.2 + yOffset); //Q2
+    glVertex2f(1 + xOffset, 7.2 + yOffset); //R2
+    glVertex2f(1 + xOffset, 7 + yOffset); //O2
+    glVertex2f(0 + xOffset, 7 + yOffset); //P2
+    glEnd();
+
+    // H
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(1.7 + xOffset, 8 + yOffset); //B3
+    glVertex2f(1.5 + xOffset, 8 + yOffset); //W2
+    glVertex2f(1.5 + xOffset, 7 + yOffset); //Z2
+    glVertex2f(1.7 + xOffset, 7 + yOffset); //A3
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(1.7 + xOffset, 7.6 + yOffset); //H3
+    glVertex2f(1.7 + xOffset, 7.4 + yOffset); //J3
+    glVertex2f(2.3 + xOffset, 7.4 + yOffset); //I3
+    glVertex2f(2.3 + xOffset, 7.6 + yOffset); //G3
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(2.3 + xOffset, 8 + yOffset); //F3
+    glVertex2f(2.5 + xOffset, 8 + yOffset); //C3
+    glVertex2f(2.5 + xOffset, 7 + yOffset); //D3
+    glVertex2f(2.3 + xOffset, 7 + yOffset); //E3
+    glEnd();
+
+    // O
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(4 + xOffset, 8 + yOffset); //P3
+    glVertex2f(3 + xOffset, 8 + yOffset); //M3
+    glVertex2f(3 + xOffset, 7 + yOffset); //N3
+    glVertex2f(4 + xOffset, 7 + yOffset); //O3
+    glEnd();
+
+    glColor3f(greenR, greenG, greenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(3.8 + xOffset, 7.8 + yOffset); //T3
+    glVertex2f(3.2 + xOffset, 7.8 + yOffset); //Q3
+    glVertex2f(3.2 + xOffset, 7.2 + yOffset); //R3
+    glVertex2f(3.8 + xOffset, 7.2 + yOffset); //S3
+    glEnd();
+
+    // P
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(4.5 + xOffset, 8 + yOffset); //U3
+    glVertex2f(5.5 + xOffset, 8 + yOffset); //A4
+    glVertex2f(5.5 + xOffset, 7.4 + yOffset); //F4
+    glVertex2f(4.5 + xOffset, 7.4 + yOffset); //G4
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(4.7 + xOffset, 7.8 + yOffset); //W3
+    glVertex2f(5.3 + xOffset, 7.8 + yOffset); //B4
+    glVertex2f(5.3 + xOffset, 7.6 + yOffset); //C4
+    glVertex2f(4.7 + xOffset, 7.6 + yOffset); //H4
+    glEnd();
+
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(4.5 + xOffset, 7.4 + yOffset); //G4
+    glVertex2f(4.7 + xOffset, 7.4 + yOffset); //E4
+    glVertex2f(4.7 + xOffset, 7 + yOffset); //Z3
+    glVertex2f(4.5 + xOffset, 7 + yOffset); //V3
+    glEnd();
+}
+
 void display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
@@ -240,6 +584,9 @@ void display(void)
 
 	shadow();
     logo();
+
+	logoTextShadow();
+    logoText();
 
     glFlush();
 }
