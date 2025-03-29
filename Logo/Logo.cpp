@@ -4,6 +4,9 @@
 #include <math.h>
 
 float colorBase = 255;
+float darkGreenR = 23 / colorBase;
+float darkGreenG = 66 / colorBase;
+float darkGreenB = 40 / colorBase;
 float greenR = 63 / colorBase;
 float greenG = 125 / colorBase;
 float greenB = 88 / colorBase;
@@ -34,11 +37,9 @@ void DrawCircle(float cx, float cy, float r, int num_segments)
     glEnd();
 }
 
-void display(void)
+// Logo graphic
+void logo()
 {
-    glClear(GL_COLOR_BUFFER_BIT);
-    glLoadIdentity();
-
     // Mid Rect
     glColor3f(orangeR, orangeG, orangeB);
     glBegin(GL_POLYGON);
@@ -130,6 +131,114 @@ void display(void)
     glVertex2f(-7.5, -3.2); // W
     glVertex2f(-6, -3.2); // Z
     glEnd();
+}
+
+// Shadow of the logo
+void shadow()
+{
+	float xOffset = -0.3;
+	float yOffset = -0.3;
+
+    // Mid Rect
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-5 + xOffset, 0.5 + yOffset); //A
+    glVertex2f(5 + xOffset, 0.5 + yOffset); //B
+    glVertex2f(4.5 + xOffset, -0.5 + yOffset); //C
+    glVertex2f(-4.5 + xOffset, -0.5 + yOffset); //D
+    glEnd();
+
+    // Upper Rect
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-5.8 + xOffset, 2 + yOffset); //H
+    glVertex2f(-5.2 + xOffset, 1 + yOffset); //E
+    glVertex2f(5.2 + xOffset, 1 + yOffset); //F
+    glVertex2f(5.8 + xOffset, 2 + yOffset); //G
+    glEnd();
+
+    // Lower Rect
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-4.3 + xOffset, -1 + yOffset); //I
+    glVertex2f(4.3 + xOffset, -1 + yOffset); //J
+    glVertex2f(3.8 + xOffset, -2 + yOffset); //K
+    glVertex2f(-3.8 + xOffset, -2 + yOffset); //L
+    glEnd();
+
+    // FRAME
+    // Lower frame
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-4 + xOffset, -3 + yOffset); //P
+    glVertex2f(4 + xOffset, -3 + yOffset); //M
+    glVertex2f(4 + xOffset, -3.5 + yOffset); //N
+    glVertex2f(-4.3 + xOffset, -3.5 + yOffset); //O
+    glEnd();
+
+    // Mid frame
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-6.5 + xOffset, 2 + yOffset); //Q
+    glVertex2f(-4 + xOffset, -3 + yOffset); //P
+    glVertex2f(-4.3 + xOffset, -3.5 + yOffset); //O
+    glVertex2f(-6.8 + xOffset, 1.5 + yOffset); //T
+    glEnd();
+
+    // Upper frame (handle bar)
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-8 + xOffset, 2 + yOffset); // R
+    glVertex2f(-6.5 + xOffset, 2 + yOffset); //Q
+    glVertex2f(-6.8 + xOffset, 1.5 + yOffset); //T
+    glVertex2f(-8 + xOffset, 1.5 + yOffset); // R
+    glEnd();
+
+    // Wheels
+    // front wheel
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    DrawCircle(2.5 + xOffset, -5 + yOffset, 0.8, 80);
+
+    // back wheel
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    DrawCircle(-3 + xOffset, -5 + yOffset, 0.8, 80);
+
+    // DYNAMICS
+    // 1
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-6.4 + xOffset, 2.8 + yOffset); // G1
+    glVertex2f(-5.2 + xOffset, 2.8 + yOffset); // H1
+    glVertex2f(-5.2 + xOffset, 2.6 + yOffset); // E1
+    glVertex2f(-6.4 + xOffset, 2.6 + yOffset); // F1
+    glEnd();
+
+    // 2
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-6.5 + xOffset, -1 + yOffset); // A1
+    glVertex2f(-8.4 + xOffset, -1 + yOffset); // B1
+    glVertex2f(-8.4 + xOffset, -1.2 + yOffset); // C1
+    glVertex2f(-6.5 + xOffset, -1.2 + yOffset); // D1
+    glEnd();
+
+    // 3
+    glColor3f(darkGreenR, darkGreenG, darkGreenB);
+    glBegin(GL_POLYGON);
+    glVertex2f(-6 + xOffset, -3 + yOffset); // U
+    glVertex2f(-7.5 + xOffset, -3 + yOffset); // V
+    glVertex2f(-7.5 + xOffset, -3.2 + yOffset); // W
+    glVertex2f(-6 + xOffset, -3.2 + yOffset); // Z
+    glEnd();
+}
+
+void display(void)
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    glLoadIdentity();
+
+	shadow();
+    logo();
 
     glFlush();
 }
