@@ -4,18 +4,29 @@
 #include <math.h>
 
 float colorBase = 255;
-float darkGreenR = 23 / colorBase;
-float darkGreenG = 66 / colorBase;
-float darkGreenB = 40 / colorBase;
+float darkGreenR = 220 / colorBase;
+float darkGreenG = 215 / colorBase;
+float darkGreenB = 215 / colorBase;
 float greenR = 63 / colorBase;
 float greenG = 125 / colorBase;
 float greenB = 88 / colorBase;
-float whiteR = 239 / colorBase;
-float whiteG = 239 / colorBase;
-float whiteB = 239 / colorBase;
+float whiteR = 240 / colorBase;
+float whiteG = 247 / colorBase;
+float whiteB = 240 / colorBase;
 float orangeR = 239 / colorBase;
 float orangeG = 150 / colorBase;
 float orangeB = 81 / colorBase;
+float redR = 236 / colorBase;
+float redG = 82 / colorBase;
+float redB = 40 / colorBase;
+float blackR = 12 / colorBase;
+float blackG = 10 / colorBase;
+float blackB = 56 / colorBase;
+
+float logoOffsetX = 1;
+float logoOffsetY = 0;
+float logoTextOffsetX = 0;
+float logoTextOffsetY = -2.5;
 
 
 void display();
@@ -44,101 +55,101 @@ void logo()
     // Mid Rect
     glColor3f(orangeR, orangeG, orangeB);
     glBegin(GL_POLYGON);
-    glVertex2f(-5, 0.5); //A
-    glVertex2f(5, 0.5); //B
-    glVertex2f(4.5, -0.5); //C
-    glVertex2f(-4.5, -0.5); //D
+    glVertex2f(-5 + logoOffsetX, 0.5 + logoOffsetY); //A
+    glVertex2f(5 + logoOffsetX, 0.5 + logoOffsetY); //B
+    glVertex2f(4.5 + logoOffsetX, -0.5 + logoOffsetY); //C
+    glVertex2f(-4.5 + logoOffsetX, -0.5 + logoOffsetY); //D
     glEnd();
 
     // Upper Rect
-    glColor3f(orangeR, orangeG, orangeB);
+    glColor3f(greenR, greenG, greenB);
     glBegin(GL_POLYGON);
-    glVertex2f(-5.8, 2); //H
-    glVertex2f(-5.2, 1); //E
-    glVertex2f(5.2, 1); //F
-    glVertex2f(5.8, 2); //G
+    glVertex2f(-5.8 + logoOffsetX, 2 + logoOffsetY); //H
+    glVertex2f(-5.2 + logoOffsetX, 1 + logoOffsetY); //E
+    glVertex2f(5.2 + logoOffsetX, 1 + logoOffsetY); //F
+    glVertex2f(5.8 + logoOffsetX, 2 + logoOffsetY); //G
     glEnd();
 
     // Lower Rect
-    glColor3f(orangeR, orangeG, orangeB);
+    glColor3f(redR, redG, redB);
     glBegin(GL_POLYGON);
-    glVertex2f(-4.3, -1); //I
-    glVertex2f(4.3, -1); //J
-    glVertex2f(3.8, -2); //K
-    glVertex2f(-3.8, -2); //L
+    glVertex2f(-4.3 + logoOffsetX, -1 + logoOffsetY); //I
+    glVertex2f(4.3 + logoOffsetX, -1 + logoOffsetY); //J
+    glVertex2f(3.8 + logoOffsetX, -2 + logoOffsetY); //K
+    glVertex2f(-3.8 + logoOffsetX, -2 + logoOffsetY); //L
     glEnd();
 
     // FRAME
     // Lower frame
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
-    glVertex2f(-4, -3); //P
-    glVertex2f(4, -3); //M
-    glVertex2f(4, -3.5); //N
-    glVertex2f(-4.3, -3.5); //O
+    glVertex2f(-4 + logoOffsetX, -3 + logoOffsetY); //P
+    glVertex2f(4 + logoOffsetX, -3 + logoOffsetY); //M
+    glVertex2f(4 + logoOffsetX, -3.5 + logoOffsetY); //N
+    glVertex2f(-4.3 + logoOffsetX, -3.5 + logoOffsetY); //O
     glEnd();
 
     // Mid frame
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
-    glVertex2f(-6.5, 2); //Q
-    glVertex2f(-4, -3); //P
-    glVertex2f(-4.3, -3.5); //O
-    glVertex2f(-6.8, 1.5); //T
+    glVertex2f(-6.5 + logoOffsetX, 2 + logoOffsetY); //Q
+    glVertex2f(-4 + logoOffsetX, -3 + logoOffsetY); //P
+    glVertex2f(-4.3 + logoOffsetX, -3.5 + logoOffsetY); //O
+    glVertex2f(-6.8 + logoOffsetX, 1.5 + logoOffsetY); //T
     glEnd();
 
     // Upper frame (handle bar)
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
-    glVertex2f(-8, 2); // R
-    glVertex2f(-6.5, 2); //Q
-    glVertex2f(-6.8, 1.5); //T
-    glVertex2f(-8, 1.5); // R
+    glVertex2f(-8 + logoOffsetX, 2 + logoOffsetY); // R
+    glVertex2f(-6.5 + logoOffsetX, 2 + logoOffsetY); //Q
+    glVertex2f(-6.8 + logoOffsetX, 1.5 + logoOffsetY); //T
+    glVertex2f(-8 + logoOffsetX, 1.5 + logoOffsetY); // R
     glEnd();
 
     // Wheels
     // front wheel
-    glColor3f(whiteR, whiteG, whiteB);
-    DrawCircle(2.5, -5, 0.8, 80);
+    glColor3f(blackR, blackG, blackB);
+    DrawCircle(2.5 + logoOffsetX, -5 + logoOffsetY, 0.8, 80);
 
     // back wheel
-    glColor3f(whiteR, whiteG, whiteB);
-    DrawCircle(-3, -5, 0.8, 80);
+    glColor3f(blackR, blackG, blackB);
+    DrawCircle(-3 + logoOffsetX, -5 + logoOffsetY, 0.8, 80);
 
     // DYNAMICS
     // 1
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(orangeR, orangeG, orangeB);
     glBegin(GL_POLYGON);
-    glVertex2f(-6.4, 2.8); // G1
-    glVertex2f(-5.2, 2.8); // H1
-    glVertex2f(-5.2, 2.6); // E1
-    glVertex2f(-6.4, 2.6); // F1
+    glVertex2f(-6.4 + logoOffsetX, 2.8 + logoOffsetY); // G1
+    glVertex2f(-5.2 + logoOffsetX, 2.8 + logoOffsetY); // H1
+    glVertex2f(-5.2 + logoOffsetX, 2.6 + logoOffsetY); // E1
+    glVertex2f(-6.4 + logoOffsetX, 2.6 + logoOffsetY); // F1
     glEnd();
 
     // 2
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(redR, redG, redB);
     glBegin(GL_POLYGON);
-    glVertex2f(-6.5, -1); // A1
-    glVertex2f(-8.4, -1); // B1
-    glVertex2f(-8.4, -1.2); // C1
-    glVertex2f(-6.5, -1.2); // D1
+    glVertex2f(-6.5 + logoOffsetX, -1 + logoOffsetY); // A1
+    glVertex2f(-8.4 + logoOffsetX, -1 + logoOffsetY); // B1
+    glVertex2f(-8.4 + logoOffsetX, -1.2 + logoOffsetY); // C1
+    glVertex2f(-6.5 + logoOffsetX, -1.2 + logoOffsetY); // D1
     glEnd();
 
     // 3
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(greenR, greenG, greenB);
     glBegin(GL_POLYGON);
-    glVertex2f(-6, -3); // U
-    glVertex2f(-7.5, -3); // V
-    glVertex2f(-7.5, -3.2); // W
-    glVertex2f(-6, -3.2); // Z
+    glVertex2f(-6 + logoOffsetX, -3 + logoOffsetY); // U
+    glVertex2f(-7.5 + logoOffsetX, -3 + logoOffsetY); // V
+    glVertex2f(-7.5 + logoOffsetX, -3.2 + logoOffsetY); // W
+    glVertex2f(-6 + logoOffsetX, -3.2 + logoOffsetY); // Z
     glEnd();
 }
 
 // Draw the shadow of the logo
 void shadow()
 {
-	float xOffset = -0.3;
-	float yOffset = -0.3;
+	float xOffset = -0.2 + logoOffsetX;
+	float yOffset = -0.1 + logoOffsetY;
 
     // Mid Rect
     glColor3f(darkGreenR, darkGreenG, darkGreenB);
@@ -235,11 +246,11 @@ void shadow()
 
 void logoText()
 {
-    float xOffset = 0;
-    float yOffset = 0;
+    float xOffset = logoTextOffsetX;
+    float yOffset = logoTextOffsetY;
 
     // G
-	glColor3f(whiteR, whiteG, whiteB);
+	glColor3f(blackR, blackG, blackB);
 	glBegin(GL_POLYGON);
     glVertex2f(-3.5 + xOffset, 8 + yOffset); //S1
     glVertex2f(-4.5 + xOffset, 8 + yOffset); //T1
@@ -247,7 +258,7 @@ void logoText()
     glVertex2f(-3.5 + xOffset, 7.8 + yOffset); //V1
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(-4.5 + xOffset, 8 + yOffset); //T1
     glVertex2f(-4.5 + xOffset, 7 + yOffset); //W1
@@ -255,7 +266,7 @@ void logoText()
     glVertex2f(-4.3 + xOffset, 7.8 + yOffset); //U1
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(-4.5 + xOffset, 7 + yOffset); //W1
     glVertex2f(-3.5 + xOffset, 7 + yOffset); //A2
@@ -263,7 +274,7 @@ void logoText()
     glVertex2f(-4.3 + xOffset, 7.2 + yOffset); //Z1
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(-3.5 + xOffset, 7 + yOffset); //A2
     glVertex2f(-3.5 + xOffset, 7.6 + yOffset); //C2
@@ -271,7 +282,7 @@ void logoText()
     glVertex2f(-3.7 + xOffset, 7.2 + yOffset); //B2
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(-3.5 + xOffset, 7.6 + yOffset); //C2
     glVertex2f(-3.9 + xOffset, 7.6 + yOffset); //E2
@@ -280,7 +291,7 @@ void logoText()
     glEnd();
 
     // O
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
 	glVertex2f(-2 + xOffset, 8 + yOffset); //N1
 	glVertex2f(-3 + xOffset, 8 + yOffset); //K1
@@ -288,7 +299,7 @@ void logoText()
 	glVertex2f(-2 + xOffset, 7 + yOffset); //M1
     glEnd();
 
-    glColor3f(greenR, greenG, greenB);
+    glColor3f(whiteR, whiteG, whiteB);
     glBegin(GL_POLYGON);
     glVertex2f(-2.2 + xOffset, 7.8 + yOffset); //R1
     glVertex2f(-2.8 + xOffset, 7.8 + yOffset); //O1
@@ -297,7 +308,7 @@ void logoText()
     glEnd();
 
     // S
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(1 + xOffset, 8 + yOffset); //G2
     glVertex2f(0 + xOffset, 8 + yOffset); //H2
@@ -305,7 +316,7 @@ void logoText()
     glVertex2f(1 + xOffset, 7.8 + yOffset); //N2
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(0 + xOffset, 7.8 + yOffset); //M2
     glVertex2f(0 + xOffset, 7.6 + yOffset); //J2
@@ -313,7 +324,7 @@ void logoText()
     glVertex2f(0.2 + xOffset, 7.8 + yOffset); //S2
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(0 + xOffset, 7.6 + yOffset); //J2
     glVertex2f(0 + xOffset, 7.4 + yOffset); //K2
@@ -321,7 +332,7 @@ void logoText()
     glVertex2f(1 + xOffset, 7.6 + yOffset); //I2
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(0.8 + xOffset, 7.4 + yOffset); //U2
     glVertex2f(1 + xOffset, 7.4 + yOffset); //L2
@@ -329,7 +340,7 @@ void logoText()
     glVertex2f(0.8 + xOffset, 7.2 + yOffset); //V2
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(0 + xOffset, 7.2 + yOffset); //Q2
     glVertex2f(1 + xOffset, 7.2 + yOffset); //R2
@@ -338,7 +349,7 @@ void logoText()
     glEnd();
 
     // H
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(1.7 + xOffset, 8 + yOffset); //B3
     glVertex2f(1.5 + xOffset, 8 + yOffset); //W2
@@ -346,7 +357,7 @@ void logoText()
     glVertex2f(1.7 + xOffset, 7 + yOffset); //A3
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(1.7 + xOffset, 7.6 + yOffset); //H3
     glVertex2f(1.7 + xOffset, 7.4 + yOffset); //J3
@@ -354,7 +365,7 @@ void logoText()
     glVertex2f(2.3 + xOffset, 7.6 + yOffset); //G3
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(2.3 + xOffset, 8 + yOffset); //F3
     glVertex2f(2.5 + xOffset, 8 + yOffset); //C3
@@ -363,7 +374,7 @@ void logoText()
     glEnd();
 
     // O
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(4 + xOffset, 8 + yOffset); //P3
     glVertex2f(3 + xOffset, 8 + yOffset); //M3
@@ -371,7 +382,7 @@ void logoText()
     glVertex2f(4 + xOffset, 7 + yOffset); //O3
     glEnd();
 
-    glColor3f(greenR, greenG, greenB);
+    glColor3f(whiteR, whiteG, whiteB);
     glBegin(GL_POLYGON);
 	glVertex2f(3.8 + xOffset, 7.8 + yOffset); //T3
 	glVertex2f(3.2 + xOffset, 7.8 + yOffset); //Q3
@@ -380,7 +391,7 @@ void logoText()
     glEnd();
 
     // P
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(4.5 + xOffset, 8 + yOffset); //U3
     glVertex2f(5.5 + xOffset, 8 + yOffset); //A4
@@ -388,7 +399,7 @@ void logoText()
     glVertex2f(4.5 + xOffset, 7.4 + yOffset); //G4
     glEnd();
 
-    glColor3f(greenR, greenG, greenB);
+    glColor3f(whiteR, whiteG, whiteB);
     glBegin(GL_POLYGON);
     glVertex2f(4.7 + xOffset, 7.8 + yOffset); //W3
     glVertex2f(5.3 + xOffset, 7.8 + yOffset); //B4
@@ -396,7 +407,7 @@ void logoText()
     glVertex2f(4.7 + xOffset, 7.6 + yOffset); //H4
     glEnd();
 
-    glColor3f(whiteR, whiteG, whiteB);
+    glColor3f(blackR, blackG, blackB);
     glBegin(GL_POLYGON);
     glVertex2f(4.5 + xOffset, 7.4 + yOffset); //G4
     glVertex2f(4.7 + xOffset, 7.4 + yOffset); //E4
@@ -409,8 +420,8 @@ void logoText()
 // Draw the shadow of the logo text
 void logoTextShadow()
 {
-    float xOffset = -0.2;
-    float yOffset = -0.2;
+    float xOffset = -0.1 + logoTextOffsetX;
+    float yOffset = -0.1 + logoTextOffsetY;
 
     // G
     glColor3f(darkGreenR, darkGreenG, darkGreenB);
@@ -604,7 +615,7 @@ void reshape(int w, int h)
 
 void init()
 {
-    glClearColor(greenR, greenG, greenB, 1);
+    glClearColor(whiteR, whiteG, whiteB, 1);
 }
 
 int main(int argc, char* argv[])
